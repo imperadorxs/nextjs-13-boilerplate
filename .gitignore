@@ -4,6 +4,10 @@
 /node_modules
 /.pnp
 .pnp.js
+.env
+# pwa
+public/sw.js
+public/workbox-*.js
 
 # testing
 /coverage
@@ -30,7 +34,3 @@ yarn-error.log*
 
 # vercel
 .vercel
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts
