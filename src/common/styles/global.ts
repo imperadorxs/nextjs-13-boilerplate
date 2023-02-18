@@ -13,16 +13,10 @@ ${({ theme }) => css`
   }
 
   html,
-  body,
-  #__next {
+  body {
     height: 100%;
     background-color: #333;
     color: #ccc;
-  }
-
-  body {
-    font-family: ${theme.font.family};
-    font-size: ${theme.font.sizes.medium};
   }
 `}
 

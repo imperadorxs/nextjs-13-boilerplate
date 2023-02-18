@@ -1,13 +1,11 @@
-import Image from 'next/image';
-import { Inter } from '@next/font/google';
-import styles from './page.module.css';
+'use client';
 
-const inter = Inter({ subsets: ['latin'] });
+import * as S from './styles';
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <S.Wrapper>
       <h1>Next 13 boilerplate</h1>
-    </main>
+    </S.Wrapper>
   );
 }
