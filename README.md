@@ -1,38 +1,156 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">
+  <br>
+  <a><img src=".github/architecture.png" alt="logo" width="100%"></a>
+  <br>
+</h1>
+
+<p align="center">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/imperadorxs/nextjs-13-boilerplate">
+
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/imperadorxs/nextjs-13-boilerplate">
+
+  <a href="https://github.com/imperadorxs/nextjs-13-boilerplate/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/imperadorxs/nextjs-13-boilerplate">
+  </a>
+
+  <a href="https://github.com/imperadorxs/nextjs-13-boilerplate/issues">
+    <img alt="Repository issues" src="https://img.shields.io/github/issues/imperadorxs/nextjs-13-boilerplate.svg">
+  </a>
+
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
+
+   <a href="https://github.com/imperadorxs/nextjs-13-boilerplate/stargazers">
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/imperadorxs/nextjs-13-boilerplate?style=social">
+  </a>
+</p>
+
+# Next.js 13 with Typescript reference architecture
 
 ## Getting Started
 
-First, run the development server:
+Start your project with this template.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+yarn create next-app -e https://github.com/imperadorxs/nextjs-13-boilerplate
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### How to run
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+`npm install`
+`npm dev`
+<br />
+`yarn`
+`yarn dev`
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### How to build
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+`npm run build`
+<br />
+`yarn build`
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### How to tests
 
-## Learn More
+`npm test`
+<br />
+`yarn test`
 
-To learn more about Next.js, take a look at the following resources:
+# File structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**This is your source code tree:**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```
+src
+|-- common
+   |-- assets
+   |-- helpers
+   |-- mocks
+   |-- styles
+   |-- utils
+|-- components
+|-- config
+|-- hooks
+|-- app
+   |-- lib
+          |-- registry
+   |-- head.tsx
+   |-- layout.tsx
+   |-- page.tsx
+|-- services
+...
+```
 
-## Deploy on Vercel
+**This is your component structure:**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+...
+components
+|-- YourComponent
+   |-- YourComponent.tsx
+   |-- YourComponent.spec.ts
+   |-- YourComponent.stories.tsx
+   |-- interfaces.ts
+   |-- styles.ts
+   |-- index.tsx
+...
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+**These are the folders and their functions:**
+
+`./common`
+
+Here are all the project assets that will be used by the application such as global styles, images, fonts, mocks, reusable functions, among others
+
+`./components`
+
+Components are presentational only elements, grouping UI items
+
+`./configs`
+
+Configs are our application's global settings files
+
+`./hooks`
+
+Hooks are functions that allow you to “plug in” to React's state and lifecycle features from functional components
+
+`./app`
+
+App is a new pages folder are mapped in routes and have all the containers needed to implement a functionality
+
+`./services`
+
+Contains all the files responsible for consuming external services, such as the axios configuration file for consuming RestFul APIs.
+
+### More utils commands
+
+Find and fix Javascrit and TypeScript problems according to pre-defined rules
+`npm run lint`
+`yarn lint`
+
+# Advantages of using this react project template
+
+The project is already configured with:
+
+- React
+- Typescript
+- Jest
+- Eslint
+- Prettier
+- Styled
+- Husky
+- Storybook
+
+### Main dependecies
+
+- [nextjs](https://nextjs.org/blog/next-13/)
+- [react](https://reactjs.org/)
+- [styled-components](https://styled-components.com/)
+
+### Main dev dependecies
+
+- [testing-library](https://testing-library.com/)
+- [eslint](https://eslint.org/)
+- [husky](https://www.npmjs.com/package/husky)
+- [lint-staged](https://www.npmjs.com/package/lint-staged)
+- [prettier](https://prettier.io/)
+- [typescript](https://www.typescriptlang.org/)
+- [web-vitals](https://web.dev/vitals/)
